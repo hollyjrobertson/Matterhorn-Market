@@ -11,7 +11,7 @@ import g3 from './images/products/gizmo_3.jpg';
 function Home() {
     return (
         <div className="home">
-            <h1 className="home__banner"> Welcome to the Matterhorn Market </h1>
+            <div class="home__banner"></div>
             <div className="home__container">
                 <div className="home__row">
                     <Product

@@ -40,12 +40,12 @@ function Header() {
                         Peak
                     </span>
                 </div>
-                <div className="header__optionBasket">
-                    <Link to="/checkout">
+                <Link to="/checkout">
+                    <div className="header__optionBasket">
                         <ShoppingBasketIcon color="primary"/>
                         <span className="header__optionLineTwo header__basketCount">0</span>
-                    </Link>
-                </div>  
+                    </div>
+                </Link>
             </div>
         </div>
     )
