@@ -1,0 +1,28 @@
+.checkout {
+    display: flex;
+    padding: 20px;
+    height: max-content;
+    background-color: #f5f5f5;
+    opacity: 0.9;
+}
+
+.checkout__banner {
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 1;
+}
+
+.checkout_title {
+    margin-right: 10px;
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+}
+
+.checkout__right {
+    padding: 10px;
+    border-bottom: 1px solid lightgray;
+    
+}
+
+
+

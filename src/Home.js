@@ -1,6 +1,5 @@
 import React from 'react';
 import './style/Home.css';
-import home from './images/home.jpg';
 import Product from './Product';
 import b1 from './images/products/bishop_1.jpg';
 import b2 from './images/products/bishop_2.jpg';
@@ -12,9 +11,8 @@ import g3 from './images/products/gizmo_3.jpg';
 function Home() {
     return (
         <div className="home">
+            <h1 className="home__banner"> Welcome to the Matterhorn Market </h1>
             <div className="home__container">
-            <img
-                className="home__image" src={home} alt="background"/>
                 <div className="home__row">
                     <Product
                         title="Snug as a Pug (8x11)"
