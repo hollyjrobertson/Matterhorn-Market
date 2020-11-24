@@ -1,25 +1,5 @@
 .home {
     width: 100%;
-    border: 10px solid transparent;
-    padding: 10px;
-    border-image: url(../images/home_banner.jpg) 30 stretch;
-}
-
-.home__banner {
-    width: auto;
-    height: 200px;
-    margin: 10px;
-    font-size: 2em;
-    background: url(../images/home_banner.jpg) no-repeat center;
-    background-size: 100%;
-    overflow-x:hidden;
-    overflow-y:hidden;
-    opacity: .8;
-    text-align: center;
-}
-
-.home__banner > h1 {
-    color: #4d52b1;
 }
 
 .home__row {

@@ -30,9 +30,9 @@
 }
 
 .header__searchIcon {
-    padding: 5px;
+    padding: 3px;
     height: 22px !important;
-    background-color: #383C8C;
+    background-color: #F66C11;
     filter: brightness(1.5);
 }
 
@@ -69,3 +69,23 @@
     margin-right: 10px;
     color: white;
 }  
+
+h1 {
+    color: #4d52b1;
+    font-size: 4em;
+    font-family: 'Dancing Script', cursive;
+    padding: 10px;
+}
+
+.banner {
+    width: auto;
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    background: url(../images/home_banner.jpg) no-repeat center;
+    background-size: 100%;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    opacity: .8;
+    text-align: center;
+}

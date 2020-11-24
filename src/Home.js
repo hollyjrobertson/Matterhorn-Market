@@ -11,18 +11,22 @@ import g3 from './images/products/gizmo_3.jpg';
 function Home() {
     return (
         <div className="home">
-            <div class="home__banner"></div>
+            <div class="banner">
+                <h1>Welcome</h1>
+            </div>
             <div className="home__container">
                 <div className="home__row">
                     <Product
+                        id="1"
                         title="Snug as a Pug (8x11)"
-                        price="1.5"
+                        price={4.50}
                         image={g1}
                         rating={5}
                     />
                     <Product
+                        id="2"
                         title="Boneless Bishop (8x11)"
-                        price="1"
+                        price={4.50}
                         image={b1}
                         rating={5}
                     />
@@ -30,20 +34,23 @@ function Home() {
 
                 <div className="home__row">
                     <Product
+                        id="3"
                         title="Beautiful Eyes (5x7)"
-                        price=".75"
+                        price={3.50}
                         image={g2}
                         rating={5}
                     />
                     <Product
+                        id="4"
                         title="Cocoon Cat (5.7)"
-                        price="1"
+                        price={3.50}
                         image={b2}
                         rating={5}
                     />
                     <Product
+                        id="5"
                         title="Eyes Wide Open (5x7)"
-                        price="1.25"
+                        price={3.50}
                         image={g3}
                         rating={5}
                     />
@@ -51,8 +58,9 @@ function Home() {
 
                 <div className="home__row">
                     <Product
+                        id="6"
                         title="Dozy Bishop (8x11)"
-                        price="1"
+                        price={4.50}
                         image={b3}
                         rating={5}
                     />
