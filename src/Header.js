@@ -14,41 +14,45 @@ function Header() {
             <Link to="/">
                 <img src={logo} className="header__logo" alt="logo" />
             </Link>
+
             <div className="header__search">
                 <input className="header__searchInput" type="text" />
-                    <SearchIcon className="header__searchIcon" />
+                <SearchIcon className="header__searchIcon" />
             </div>
+
             <div className="header__nav">
+                <Link to='/login'>
+                    <div className="header__option">
+                        <span className="header__optionLineOne">Hello USER</span>
+                        <span className="header__optionLineTwo">Sign In</span>
+                    </div>
+                </Link>
+                
                 <div className="header__option">
                     <span className="header__optionLineOne">
-                        Hello, Holly
-                    </span>
-                    <span className="header__optionLineTwo">
-                        Sign In
-                    </span>
-                </div>
-                <div className="header__option">
-                <span className="header__optionLineOne">
                         Returns
                     </span>
                     <span className="header__optionLineTwo">
                         & Orders
                     </span>
                 </div>
+
                 <div className="header__option">
-                <span className="header__optionLineOne">
+                    <span className="header__optionLineOne">
                         Your
                     </span>
                     <span className="header__optionLineTwo">
                         Peak
                     </span>
                 </div>
+
                 <Link to="/checkout">
                     <div className="header__optionBasket">
                         <ShoppingBasketIcon color="primary"/>
                         <span className="header__optionLineTwo header__basketCount">{basket?.length}</span>
                     </div>
                 </Link>
+
             </div>
         </div>
     )

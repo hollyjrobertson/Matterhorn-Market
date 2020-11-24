@@ -12,7 +12,8 @@ function Home() {
     return (
         <div className="home">
             <div class="banner">
-                <h1>Welcome</h1>
+                <h1 className="page__title">Welcome</h1>
+                <p className="signature">- Matterhorn Market</p>
             </div>
             <div className="home__container">
                 <div className="home__row">

@@ -9,7 +9,8 @@ function Checkout() {
     return (
         <div className="checkout">
             <div class="banner">
-                <h1>Thank You</h1>
+                <h1 className="page__title">Thank You</h1>
+                <p className="signature">- Matterhorn Market</p>
             </div>
             <div className="checkout__container">
                 <div className="column">
@@ -31,7 +32,7 @@ function Checkout() {
                 </div>
             </div>
         </div>
-    );
+    )
 }
 
 export default Checkout;
