@@ -2,9 +2,14 @@ import React from 'react';
 import './style/Product.css';
 import StarRateIcon from '@material-ui/icons/StarRate';
 import { useStateValue } from './StateProvider';
+import { orange } from '@material-ui/core/colors';
 
 function Product({ id, title, image, price, rating }) {
-    const [{ basket  }, dispatch] = useStateValue();
+    const [{ basket }, dispatch] = useStateValue();
+    
+    const formatPrice = (price) => {
+        return price.toFixed(2);
+    }
     
     const addToBasket = () => {
         // dispatch the item into the data layer
@@ -26,11 +31,11 @@ function Product({ id, title, image, price, rating }) {
                 <p>{title}</p>
                 <p className="product__price">
                     <small>$</small>
-                    <strong>{price}</strong>
+                    <strong>{ formatPrice(price) }</strong>
                 </p>
                 <div className="product__rating">
                     {Array(rating).fill().map((_, i) => (
-                        <StarRateIcon color="primary" />
+                        <StarRateIcon style={{ color: orange[500], fontSize: 30 }}/>
                     ))}
                 </div>
             </div>

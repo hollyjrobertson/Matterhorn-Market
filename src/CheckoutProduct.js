@@ -5,7 +5,9 @@ import { useStateValue } from './StateProvider';
 
 function CheckoutProduct({ id, title, image, price, rating }) {
     const [{ basket }, dispatch] = useStateValue();
-    
+    const formatPrice = (price) => {
+        return price.toFixed(2);
+    }
     const removeFromBasket = () => {
         //dispatch the item into the data layer
         //remove from basket
@@ -22,7 +24,7 @@ function CheckoutProduct({ id, title, image, price, rating }) {
                 <p className="checkoutProduct__title">{title}</p>
                 <p className="checkoutProduct__price">
                     <small>$</small>
-                    <strong>{price}</strong>
+                    <strong>{formatPrice(price)}</strong>
                 </p>
                 <div className="checkoutProduct__rating">
                     {Array(rating).fill().map((_, i) => (

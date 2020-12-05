@@ -22,6 +22,7 @@ function Subtotal() {
                         </small>
                     </>
                 )}
+                fixedDecimalScale={"true"}
                 decimalScale={2}
                 value={getBasketTotal(basket)} // Part of the homework
                 displayType={"text"}
@@ -29,7 +30,8 @@ function Subtotal() {
                 prefix={"$"}
             />
 
-            <button id="subtotal__button" onClick={e => history.push('/payment')}>Proceed to Checkout</button>
+            <button id="subtotal__button" 
+            onClick={e => history.push('/payment')}>Proceed to Checkout</button>
         </div>
     );
 }
