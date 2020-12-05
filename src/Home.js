@@ -1,12 +1,12 @@
 import React from 'react';
 import './style/Home.css';
 import Product from './Product';
-import b1 from './images/products/bishop_1.jpg';
-import b2 from './images/products/bishop_2.jpg';
-import b3 from './images/products/bishop_3.jpg';
-import g1 from './images/products/gizmo_1.jpg';
-import g2 from './images/products/gizmo_2.jpg';
-import g3 from './images/products/gizmo_3.jpg';
+import b1 from './images/products/bishop_1.png';
+import b2 from './images/products/bishop_2.png';
+import b3 from './images/products/bishop_3.png';
+import g1 from './images/products/gizmo_1.png';
+import g2 from './images/products/gizmo_2.png';
+import g3 from './images/products/gizmo_3.png';
 
 function Home() {
     return (
@@ -43,7 +43,7 @@ function Home() {
                     />
                     <Product
                         id="4"
-                        title="Cocoon Cat (5.7)"
+                        title="Cocoon Cat (5x7)"
                         price={3.50}
                         image={b2}
                         rating={5}
