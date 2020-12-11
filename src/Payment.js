@@ -39,6 +39,8 @@ function Payment() {
         getClientSecret();
     }, [basket])
 
+    console.log("The Secret is ", clientSecret)
+
     const handleSubmit = async (e) => {
         //Stripe implementation
         e.preventDefault();
