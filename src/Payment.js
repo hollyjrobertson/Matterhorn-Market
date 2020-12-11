@@ -7,6 +7,7 @@ import './style/Payment.css';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import CurrencyFormat from 'react-currency-format';
 import axios from './axios';
+import { db } from './firebase';
 
 
 function Payment() {
@@ -39,8 +40,6 @@ function Payment() {
         getClientSecret();
     }, [basket])
 
-    console.log("The Secret is ", clientSecret)
-
     const handleSubmit = async (e) => {
         //Stripe implementation
         e.preventDefault();
@@ -52,9 +51,26 @@ function Payment() {
             }
         }).then(({ paymentIntent }) => {
             //Payment Intent = Payment Confirmation
+
+            //Push order into database
+            db
+                .collection('users')
+                .doc(user?.uid)
+                .collection('orders')
+                .doc(paymentIntent.id)
+                .set({
+                    basket: basket,
+                    amount: paymentIntent.amount,
+                    created: paymentIntent.created
+                })
+
             setSucceeded(true);
             setError(null);
             setProcessing(false);
+
+            dispatch({
+                type: 'EMPTY_BASKET'
+            })
 
             history.replace('/orders')
         })
