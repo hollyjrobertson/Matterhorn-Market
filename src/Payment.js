@@ -40,33 +40,33 @@ function Payment() {
         getClientSecret();
     }, [basket])
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (event) => {
         //Stripe implementation
-        e.preventDefault();
+        event.preventDefault();
         setProcessing(true);
 
         const payload = await stripe.confirmCardPayment(clientSecret, {
             payment_method: {
                 card: elements.getElement(CardElement)
             }
-        }).then(({ paymentIntent }) => {
+        })
             //Payment Intent = Payment Confirmation
+            .then(({ paymentIntent }) => {
 
             //Push order into database
-            db
-                .collection('users')
+            db.collection('users')
                 .doc(user?.uid)
                 .collection('orders')
                 .doc(paymentIntent.id)
                 .set({
                     basket: basket,
-                    amount: paymentIntent.amount,
+                    amount: (paymentIntent.amount/100),
                     created: paymentIntent.created
                 })
 
             setSucceeded(true);
-            setError(null);
-            setProcessing(false);
+            setError(null)
+            setProcessing(false)
 
             dispatch({
                 type: 'EMPTY_BASKET'

@@ -4,7 +4,7 @@ import StarRateIcon from '@material-ui/icons/StarRate';
 import { useStateValue } from './StateProvider';
 import { orange } from '@material-ui/core/colors';
 
-function CheckoutProduct({ id, title, image, price, rating }) {
+function CheckoutProduct({ id, title, image, price, rating, hideButton }) {
     const [{ basket }, dispatch] = useStateValue();
     const formatPrice = (price) => {
         return price.toFixed(2);
@@ -32,7 +32,9 @@ function CheckoutProduct({ id, title, image, price, rating }) {
                         <p><StarRateIcon style={{ color: orange[500], fontSize: 30 }} /></p>
                     ))}
                 </div>
-                <button onClick={removeFromBasket}>Remove from Basket</button>
+                {!hideButton && (
+                    <button onClick={removeFromBasket}>Remove from Basket</button>
+                )}
             </div>
         </div>
     )
